@@ -11,9 +11,9 @@ struct HomeView: View {
     
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
     @State private var isAnimating: Bool = false
+    
     var body: some View {
         ZStack {
-            
             VStack(spacing: 20.0) {
                 //MARK: - header
                 Spacer()
@@ -45,7 +45,7 @@ struct HomeView: View {
                 //MARK: - footer
                 Button {
                     withAnimation {
-                        playSound(sound: "succes", type: "m4a")
+                        playSound(sound: "success", type: "m4a")
                         isOnboardingViewActive = true
                     }
                 } label: {
