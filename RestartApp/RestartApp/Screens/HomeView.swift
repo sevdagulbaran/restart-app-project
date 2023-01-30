@@ -13,7 +13,6 @@ struct HomeView: View {
     @State private var isAnimating: Bool = false
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea(.all)
             
             VStack(spacing: 20.0) {
                 //MARK: - header
@@ -46,6 +45,7 @@ struct HomeView: View {
                 //MARK: - footer
                 Button {
                     withAnimation {
+                        playSound(sound: "succes", type: "m4a")
                         isOnboardingViewActive = true
                     }
                 } label: {
